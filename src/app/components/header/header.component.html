@@ -1,21 +1,20 @@
-<p>header works!</p>
 <div class="card mat-card" id="profile">
-    <div id="profile-background"> <img src="https://media.istockphoto.com/photos/futuristic-earth-map-technology-abstract-background-picture-id1061550264?s=612x612" alt="description"> </div>
+    <div id="profile-background"> <img [src]="miPorfolio.backImage" alt="description"> </div>
     <div id="info">
         <div id="info-img">
-            <img class="profile-image" src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?cs=srgb&dl=pexels-pixabay-220453.jpg&fm=jpg">  
+            <img class="profile-image" [src]="miPorfolio.image">  
             <div class="btn-edit">
                 <a href="#" class="btn-right"> <i class="fa fa-pen"></i></a> 
             </div>
         </div>
         <div id="info-data">
             <div>
-                <h1>Francisco Gimenez</h1>
-                <div id="info-company">Ingeniero Electrónico en Purity Argentina</div>
+                <h1>{{miPorfolio.name}}</h1>
+                <div id="info-company">{{miPorfolio.position}}</div>
                 <div id="info-contact">
-                    <span>Córdoba Argentina</span>
-                    <span><a href="#">Información de contacto</a></span>
+                    <span>{{miPorfolio.ubicacion}}</span>
                 </div>
+                <div><span><a href="#">Información de contacto</a></span></div>
             </div>
             <div>
                 <ul id="info-details">
@@ -27,7 +26,7 @@
                     </li>  -->
                     <li>
                         <a href="https://www.frc.utn.edu.ar/">
-                            <img id="logo_frc" src="img/logo_frc_utn.jpeg" alt="Imagen Universidad Tecnolócia Nacional - FRC">
+                            <img id="logo_frc" [src]="miPorfolio.school.img" alt="Imagen Universidad Tecnolócia Nacional - FRC">
                             <!-- <h2>UTN FRC</h2> -->
                         </a>
                     </li>

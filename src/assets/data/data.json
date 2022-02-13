@@ -1,0 +1,52 @@
+{
+    "name": "Francisco Fernando Gimenez",
+    "backImage": "https://media-exp1.licdn.com/dms/image/C4D16AQFR6J3do0bl1A/profile-displaybackgroundimage-shrink_200_800/0/1643408194170?e=1650499200&v=beta&t=fHDgwW9A367gelEtskQoAU8heThB_yflrrjrdNfr4cA",
+    "image": "https://media-exp1.licdn.com/dms/image/C4D03AQEB9SvmXNtPbQ/profile-displayphoto-shrink_200_200/0/1643407579059?e=1650499200&v=beta&t=z6gVvDY9EUdXQIKQJG_sWQLvM4fK9cgXS26YJi3NLmU",
+    "position": "Ingeniero Electrónico",
+    "company": {
+        "name": "Purity",
+        "img": "",
+        "url": "#"
+    },
+    "school": {
+        "name": "Universidad Tecnológica Nacional",
+        "img": "data:image/jpeg;base64,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",
+        "url": "#"
+    },
+    "ubicacion": "Cordoba (Argentina)",
+    "about": "Ingeniero Electrónico y estudiante de Licenciatura en Ciencias de la Computación.",
+    "experience": [{
+        "position":"Backend Developer",
+        "company": "",
+        "img": "",
+        "mode": "Jornada completa",
+        "start": "Sep 2019",
+        "end": "Jul 2020",
+        "timeElapsed": "10 meses"
+        }],
+        "education":[{
+            "school": "UTN",
+            "title": "Ingiería",
+            "img": "",
+            "career": "Ingeniería Electrónica",
+            "score": 81,
+            "start": "2009",
+            "end": "2019"
+        }],
+        "aptitudes":[
+            {
+                "name": "Programación en C",
+                "confirms": 3,
+                "confirmsNames":[{
+                    "name": "Nikolal Emanuel Bayro .."
+                }]
+            }
+        ],
+        "achivements":[{
+            "name": "Certificado Ingle Pre-Intermedio"
+        },
+        {
+            "name": "Paper"
+        }]
+
+}
