@@ -5,9 +5,10 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { AptitudesComponent } from './components/aptitudes/aptitudes.component';
-import { ExperienciaYEducacionComponent } from './components/experiencia-y-educacion/experiencia-y-educacion.component';
 import { LogrosComponent } from './components/logros/logros.component';
 import { HttpClientModule } from '@angular/common/http';
+import { EducacionComponent } from './components/educacion/educacion.component';
+import { ExperienciaComponent } from './components/experiencia/experiencia.component'
 
 @NgModule({
   declarations: [
@@ -15,8 +16,9 @@ import { HttpClientModule } from '@angular/common/http';
     HeaderComponent,
     AcercaDeComponent,
     AptitudesComponent,
-    ExperienciaYEducacionComponent,
-    LogrosComponent
+    LogrosComponent,
+    EducacionComponent,
+    ExperienciaComponent
   ],
   imports: [
     BrowserModule,

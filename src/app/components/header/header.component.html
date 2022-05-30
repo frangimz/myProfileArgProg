@@ -1,5 +1,5 @@
 <div class="card mat-card" id="profile">
-    <div id="profile-background"> <img [src]="miPorfolio.backImage" alt="description"> </div>
+    <div id="profile-background"> <img [src]="miPorfolio.backimage" alt="Backgrounddelportfolio"> </div>
     <div id="info">
         <div id="info-img">
             <img class="profile-image" [src]="miPorfolio.image">  
@@ -24,15 +24,15 @@
                             <h2>Purity</h2> 
                         </a>
                     </li>  -->
-                    <li>
-                        <a href="https://www.frc.utn.edu.ar/">
+                    <li class="li-schools">
+                        <a [href]="miPorfolio.school.url">
                             <img id="logo_frc" [src]="miPorfolio.school.img" alt="Imagen Universidad Tecnolócia Nacional - FRC">
                             <!-- <h2>UTN FRC</h2> -->
                         </a>
                     </li>
-                    <li>
-                        <a href="https://www.famaf.unc.edu.ar/">
-                            <img id="logo_famaf" src="img/logoFaMAF.svg" alt="Imagen Universidad Nacional de Córdoba - FAMAF">
+                    <li class="li-schools">
+                        <a [href]="miPorfolio.school2.url">
+                            <img id="logo_famaf" [src]="miPorfolio.school2.img" alt="Imagen Universidad Nacional de Córdoba - FAMAF">
                             <!-- <h2>FAMAF UNC</h2> -->
                         </a>
                     </li>

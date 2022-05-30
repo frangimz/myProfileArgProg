@@ -13,8 +13,9 @@ div#profile-background{
 
 div#profile-background img{
     width: 2000em;
-    margin-bottom: -15em; 
+    margin-bottom: -15px; 
     border-radius: 32px 32px 0 0;
+    object-fit: cover;
 }
 
 .mat-card{
@@ -143,4 +144,18 @@ ul.items-list li div.data-container{
     position: relative;
     margin-left: 16px;
     margin-bottom: 10px;
+}
+
+.data-list{
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+}
+
+.logo-image{
+    width: 100px;
+}
+
+.list-info{
+    padding-left: 10px;
 }
