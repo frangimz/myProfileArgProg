@@ -8,7 +8,8 @@ import { AptitudesComponent } from './components/aptitudes/aptitudes.component';
 import { LogrosComponent } from './components/logros/logros.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EducacionComponent } from './components/educacion/educacion.component';
-import { ExperienciaComponent } from './components/experiencia/experiencia.component'
+import { ExperienciaComponent } from './components/experiencia/experiencia.component';
+import { LogoArgProgComponent } from './components/logo-arg-prog/logo-arg-prog.component'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
     AptitudesComponent,
     LogrosComponent,
     EducacionComponent,
-    ExperienciaComponent
+    ExperienciaComponent,
+    LogoArgProgComponent
   ],
   imports: [
     BrowserModule,
