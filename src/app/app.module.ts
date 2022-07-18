@@ -9,7 +9,8 @@ import { LogrosComponent } from './components/logros/logros.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
-import { LogoArgProgComponent } from './components/logo-arg-prog/logo-arg-prog.component'
+import { LogoArgProgComponent } from './components/logo-arg-prog/logo-arg-prog.component';
+import { SocialComponent } from './components/social/social.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { LogoArgProgComponent } from './components/logo-arg-prog/logo-arg-prog.c
     LogrosComponent,
     EducacionComponent,
     ExperienciaComponent,
-    LogoArgProgComponent
+    LogoArgProgComponent,
+    SocialComponent
   ],
   imports: [
     BrowserModule,
