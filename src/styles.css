@@ -14,7 +14,6 @@ div#profile-background{
 div#profile-background img{
     width: 2000em;
     margin-bottom: -15px; 
-    border-radius: 32px 32px 0 0;
     object-fit: cover;
 }
 

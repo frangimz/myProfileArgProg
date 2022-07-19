@@ -1,3 +1,9 @@
 .header-logo{
-    background-color: blue;
+    background-color: lightskyblue;
+}
+
+app-social{
+    float: right;
+    margin-top: 10px;
+    margin-right: 25px;
 }

@@ -12,6 +12,7 @@ import { ExperienciaComponent } from './components/experiencia/experiencia.compo
 import { LogoArgProgComponent } from './components/logo-arg-prog/logo-arg-prog.component';
 import { SocialComponent } from './components/social/social.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { PortadaComponent } from './components/portada/portada.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     EducacionComponent,
     ExperienciaComponent,
     LogoArgProgComponent,
-    SocialComponent
+    SocialComponent,
+    PortadaComponent
   ],
   imports: [
     BrowserModule,
