@@ -4,13 +4,6 @@
     padding: 0;
 }
 
-div#profile-background{
-    overflow: hidden;
-    display: flex;
-    z-index: 1;
-    height: 15em;
-}
-
 div#profile-background img{
     width: 2000em;
     margin-bottom: -15px; 

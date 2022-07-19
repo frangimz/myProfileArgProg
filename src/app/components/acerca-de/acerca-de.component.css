@@ -7,6 +7,11 @@ div{
     font-weight: bold;
 }
 
+.row{
+    margin: 0px;
+}
+
+
 /*Estilo de la img de perfil*/
 @media (min-width: 576px){
     #img-perfil{
@@ -15,12 +20,15 @@ div{
         border-radius: 100%;
         box-shadow: 2px 2px 2px 2px lightblue;
         left: 3%;
-        top:290px;
+        top:240px;
     }
     #name-title{
         margin-top: 20px;
         margin-left: 15px;
-        /*left: 4%;*/
+        height: 100px;
+    }
+    #acerca-de-mi{
+        margin-top: 10px;
     }
 }
 

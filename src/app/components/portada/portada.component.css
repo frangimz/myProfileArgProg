@@ -1,0 +1,6 @@
+div#profile-background{
+    overflow: hidden;
+    display: flex;
+    z-index: 1;
+    height: 250px;
+}
