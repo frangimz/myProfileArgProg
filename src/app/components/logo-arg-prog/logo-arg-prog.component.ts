@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { faLinkedin, faGithub, faInstagram} from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -10,9 +11,13 @@ export class LogoArgProgComponent implements OnInit {
   faLinkedin = faLinkedin;
   faGithub = faGithub;
   faInstagram = faInstagram;
-  constructor() { }
+  
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
+  }
+  login(){
+    this.router.navigate(['/login']);
   }
 
 }
