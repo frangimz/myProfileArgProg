@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { PorfolioService } from 'src/app/services/porfolio.service';
+import { PorfolioService } from '../../services/porfolio.service';
 
 @Component({
   selector: 'app-aptitudes',
