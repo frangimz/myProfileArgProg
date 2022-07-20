@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { AcercaDeComponent } from './components/acerca-de/acerca-de.component';
 import { AptitudesComponent } from './components/aptitudes/aptitudes.component';
-import { LogrosComponent } from './components/logros/logros.component';
 import { HttpClientModule } from '@angular/common/http';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
@@ -15,6 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PortadaComponent } from './components/portada/portada.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -22,13 +22,13 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
     HeaderComponent,
     AcercaDeComponent,
     AptitudesComponent,
-    LogrosComponent,
     EducacionComponent,
     ExperienciaComponent,
     LogoArgProgComponent,
     SocialComponent,
     PortadaComponent,
-    ProyectosComponent
+    ProyectosComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
