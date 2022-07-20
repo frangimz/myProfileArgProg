@@ -13,6 +13,8 @@ import { LogoArgProgComponent } from './components/logo-arg-prog/logo-arg-prog.c
 import { SocialComponent } from './components/social/social.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PortadaComponent } from './components/portada/portada.component';
+import { NgCircleProgressModule } from 'ng-circle-progress';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
 
 @NgModule({
   declarations: [
@@ -25,12 +27,14 @@ import { PortadaComponent } from './components/portada/portada.component';
     ExperienciaComponent,
     LogoArgProgComponent,
     SocialComponent,
-    PortadaComponent
+    PortadaComponent,
+    ProyectosComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    NgCircleProgressModule.forRoot({})
   ],
   providers: [],
   bootstrap: [AppComponent]
