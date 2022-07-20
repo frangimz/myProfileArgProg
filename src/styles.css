@@ -4,12 +4,6 @@
     padding: 0;
 }
 
-div#profile-background img{
-    width: 2000em;
-    margin-bottom: -15px; 
-    object-fit: cover;
-}
-
 .mat-card{
     border-radius: 32px;
     margin: 10px 10px;

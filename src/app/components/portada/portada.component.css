@@ -4,3 +4,9 @@ div#profile-background{
     z-index: 1;
     height: 250px;
 }
+div#profile-background img{
+    width: 2000em;
+    margin-bottom: -15px; 
+    object-fit: cover;
+    padding: 0px;
+}

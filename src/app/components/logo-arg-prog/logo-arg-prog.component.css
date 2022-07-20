@@ -1,4 +1,34 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.redes{
+    margin-right: 0.5em;
+}
 #logo_h{
     width: 150px;
     padding: 20px;
+}
+.social-icons{
+    border: 0px;
+    font-size: 40px;
+    padding: 5px;
+    margin-top: 20px;
+    color: white;
+}
+/*Para la vista de celular*/
+@media (max-width: 575px){
+    .container{
+        flex-direction: column;
+    }
+    .redes{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn{
+        margin-bottom: 15px;
+    }
 }

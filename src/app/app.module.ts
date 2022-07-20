@@ -9,7 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { EducacionComponent } from './components/educacion/educacion.component';
 import { ExperienciaComponent } from './components/experiencia/experiencia.component';
 import { LogoArgProgComponent } from './components/logo-arg-prog/logo-arg-prog.component';
-import { SocialComponent } from './components/social/social.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PortadaComponent } from './components/portada/portada.component';
 import { NgCircleProgressModule } from 'ng-circle-progress';
@@ -25,7 +24,6 @@ import { FooterComponent } from './components/footer/footer.component';
     EducacionComponent,
     ExperienciaComponent,
     LogoArgProgComponent,
-    SocialComponent,
     PortadaComponent,
     ProyectosComponent,
     FooterComponent
