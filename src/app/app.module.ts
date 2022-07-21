@@ -18,6 +18,7 @@ import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
 import { AppRoutingModule } from './app-routing.module';
 import { FormsModule }   from '@angular/forms';
+import { InterceptorProvider } from './services/interceptor-service';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,9 @@ import { FormsModule }   from '@angular/forms';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [],
+  providers: [
+    InterceptorProvider
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
