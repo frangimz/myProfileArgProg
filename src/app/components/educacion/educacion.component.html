@@ -1,62 +1,28 @@
 <div class="row">
-  <h2>Educación</h2>
+  <h2>Educación
+      <a class="icons" href="/nuevaedu" *ngIf="isLogged">
+        <fa-icon [icon]="faPlusCircle"></fa-icon> 
+      </a>
+    </h2>
   <div class="col-lg-1"></div>
   <div class="col-lg-11">
-    <ul>
-      <li>
-        <h1>Educación 1</h1> - <h3>(años)</h3>
-      </li>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, doloremque. Maxime aut provident deleniti ea nam illum rerum cum. Illo voluptas iusto magnam quia aspernatur et, reprehenderit architecto assumenda nihil.
-      </p>
-      <li>
-        <h1>Educación 2</h1> - <h3>(años)</h3>
-      </li>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, doloremque. Maxime aut provident deleniti ea nam illum rerum cum. Illo voluptas iusto magnam quia aspernatur et, reprehenderit architecto assumenda nihil.
-      </p>
-      <li>
-        <h1>Educación 3</h1> - <h3>(años)</h3>
-      </li>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, doloremque. Maxime aut provident deleniti ea nam illum rerum cum. Illo voluptas iusto magnam quia aspernatur et, reprehenderit architecto assumenda nihil.
-      </p>
-    </ul>
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let Educacion of educacion">
+          <td><h3>{{Educacion.nombreEd}}</h3></td>
+          <td>{{Educacion.descripcionEd}}</td>
+          <td *ngIf="isLogged">
+              <a class="icons" href="/editedu/{{Educacion.id}}">
+                <fa-icon [icon]="faPen"></fa-icon> 
+              </a>
+          </td>
+          <td *ngIf="isLogged">
+            <a class="icons" (click)="delete(Educacion.id)">
+              <fa-icon [icon]="faTrash"></fa-icon> 
+            </a>
+        </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
-
-<!--<div class="card mat-card">
-    <div id="educacion">
-      <div class="card-titles">
-        <h2>Educación</h2>
-        <div class="btn-edit">
-          <a href="#" class="btn-right"></a>
-        </div>
-      </div>
-    </div>
-    <div>
-      <ul class="items-list">
-        <li *ngFor="let educacion of educacionList">
-          <div class="data-container">
-            <a class="data-list" [href]="educacion.url">
-              <div class="logo-image-container">
-                <img
-                  class="logo-image"
-                  [src]="educacion.img"
-                />
-              </div>
-            </a>
-            <div class="list-info">
-              <div>
-                <h3>{{educacion.school}}</h3>
-                <p>{{educacion.career}}</p>
-                <p><time>{{educacion.start}}</time> - <time>{{educacion.end}}</time></p>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>-->
-
-

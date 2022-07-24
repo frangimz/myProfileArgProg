@@ -9,3 +9,8 @@ div{
 h1, h3{
     display: inline;
 }
+
+.icons{
+    text-decoration: none;
+    color: blue;
+}
