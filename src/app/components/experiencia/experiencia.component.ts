@@ -1,5 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { PorfolioService } from '../../services/porfolio.service';
+import { Experiencia } from 'src/app/model/experiencia';
+import { SExperienciaService } from 'src/app/services/s-experiencia.service';
+import { TokenService } from 'src/app/services/token.service';
+import { faPen, faTrash, faPlus,faPlusCircle} from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-experiencia',
@@ -9,14 +13,44 @@ import { PorfolioService } from '../../services/porfolio.service';
 
 
 export class ExperienciaComponent implements OnInit {
-  experienceList: any;
-  constructor(private datosPorfolio:PorfolioService) { }
+  expe: Experiencia[] = [];
+
+  faPlus =faPlus;
+  faPen= faPen;
+  faTrash=faTrash;
+  faPlusCircle = faPlusCircle;
+
+  constructor(private sExperiencia: SExperienciaService, private tokenService: TokenService) { }
+
+  isLogged = false;
 
   ngOnInit(): void {
-    this.datosPorfolio.obtenerDatos().subscribe(data=>{
-      this.experienceList=data.experience;
-    })
+    this.cargarExperiencia();
+    if(this.tokenService.getToken()){
+      this.isLogged = true;
+    }else{
+      this.isLogged = false;
+    }
+  }
+
+  cargarExperiencia():void{
+    this.sExperiencia.lista().subscribe(
+      data => {this.expe = data;}
+    )
+  }
+
+  delete(id?:number){
+    if(id!= undefined){
+      this.sExperiencia.delete(id).subscribe(
+        data =>{
+          this.cargarExperiencia();
+        },err =>{
+          alert("No se pudo eliminar la experiencia");
+        }
+      )
+    }
   }
 }
+
 
 

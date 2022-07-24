@@ -1,27 +1,29 @@
 <div class="row">
-  <h2>Experiencia Laboral</h2>
+  <h2>Experiencia Laboral
+      <a class="icons" href="/nuevaexp" *ngIf="isLogged">
+        <fa-icon [icon]="faPlusCircle"></fa-icon> 
+      </a>
+    </h2>
   <div class="col-lg-1"></div>
   <div class="col-lg-11">
-    <ul>
-      <li>
-        <h1>Trabajo 1</h1> - <h3>(años)</h3>
-      </li>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, doloremque. Maxime aut provident deleniti ea nam illum rerum cum. Illo voluptas iusto magnam quia aspernatur et, reprehenderit architecto assumenda nihil.
-      </p>
-      <li>
-        <h1>Trabajo 2</h1> - <h3>(años)</h3>
-      </li>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, doloremque. Maxime aut provident deleniti ea nam illum rerum cum. Illo voluptas iusto magnam quia aspernatur et, reprehenderit architecto assumenda nihil.
-      </p>
-      <li>
-        <h1>Trabajo 3</h1> - <h3>(años)</h3>
-      </li>
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum, doloremque. Maxime aut provident deleniti ea nam illum rerum cum. Illo voluptas iusto magnam quia aspernatur et, reprehenderit architecto assumenda nihil.
-      </p>
-    </ul>
+    <table class="table">
+      <tbody>
+        <tr *ngFor="let Experiencia of expe">
+          <td><h2>{{Experiencia.nombreE}}</h2></td>
+          <td>{{Experiencia.descripcionE}}</td>
+          <td *ngIf="isLogged">
+              <a class="icons" href="/editexp/{{Experiencia.id}}">
+                <fa-icon [icon]="faPen"></fa-icon> 
+              </a>
+          </td>
+          <td *ngIf="isLogged">
+            <a class="icons" (click)="delete(Experiencia.id)">
+              <fa-icon [icon]="faTrash"></fa-icon> 
+            </a>
+        </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 </div>
 <!--
