@@ -10,7 +10,6 @@ export class SSkillService {
   URL = 'https://myprofile-b.herokuapp.com/skill/';
   //URL = 'http://localhost:8080/skill/';
 
-
   constructor(private httpClient: HttpClient) { }
 
   public lista(): Observable<Skill[]>{

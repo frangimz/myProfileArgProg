@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "hosting-myprofile"
+  },
+  "targets": {
+    "hosting-myprofile": {
+      "hosting": {
+        "myprofile": [
+          "hosting-myprofile"
+        ]
+      }
+    }
   }
 }
