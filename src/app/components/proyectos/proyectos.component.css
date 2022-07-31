@@ -13,5 +13,27 @@
 }
 
 .img-proyecto{
-    box-shadow: 10px 10px 30px blue;
+    box-shadow: 2px 2px 2px 2px blue;
+    width: 200px;
+}
+
+.icons{
+    text-decoration: none;
+    color: blue;
+    padding: 5px;
+}
+
+.title{
+    margin: 0px;
+    padding-left: 20px;
+    background-color: skyblue;
+}
+
+div{
+    background-color: lightskyblue;
+    text-align: center;
+}
+
+h1.title{
+    text-align: left;
 }

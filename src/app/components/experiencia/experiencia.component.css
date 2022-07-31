@@ -14,3 +14,7 @@ h1, h3{
     text-decoration: none;
     color: blue;
 }
+
+h1.title{
+    text-align: left;
+}

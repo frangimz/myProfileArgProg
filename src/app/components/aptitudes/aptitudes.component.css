@@ -8,3 +8,15 @@
     color: blue;
     padding: 5px;
 }
+
+.btn{
+    margin-top: 10px;
+}
+
+div{
+    text-align: center;
+}
+
+h1.title{
+    text-align: left;
+}
