@@ -44,3 +44,9 @@ div{
         left: 3%;
     }
 }
+
+.icons{
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;
+}
