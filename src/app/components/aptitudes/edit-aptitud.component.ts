@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Skill } from 'src/app/model/skill';
 import { SSkillService } from 'src/app/services/s-skill.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-aptitud',
@@ -19,7 +20,8 @@ export class EditAptitudComponent implements OnInit {
       data=>{
         this.skill = data;
       },err =>{
-        alert("Error al modificar la aptitud");
+        Swal.fire({ icon: 'error',text: 'Error al modificar la aptitud'});
+        //alert("Error al modificar la aptitud");
         this.router.navigate(['']);
       }
     )
@@ -29,9 +31,11 @@ export class EditAptitudComponent implements OnInit {
     const id = this.activatedRoute.snapshot.params['id'];
     this.sSkill.update(id,this.skill).subscribe(
       data => {
+        Swal.fire('Aptitud modificada');
         this.router.navigate(['']);
       }, err =>{
-        alert("Error al modificar la aptitud");
+        Swal.fire({ icon: 'error',text: 'Error al modificar la aptitud'});
+        //alert("Error al modificar la aptitud");
         this.router.navigate(['']);
       }
     )

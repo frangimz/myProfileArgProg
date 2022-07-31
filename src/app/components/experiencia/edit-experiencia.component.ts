@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouteConfigLoadEnd, Router } from '@angular/router';
 import { Experiencia } from 'src/app/model/experiencia';
 import { SExperienciaService } from 'src/app/services/s-experiencia.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-experiencia',
@@ -18,7 +19,8 @@ export class EditExperienciaComponent implements OnInit {
       data=>{
         this.expLab = data;
       },err =>{
-        alert("Error al modificar experiencia");
+        Swal.fire({ icon: 'error',text: 'Error al modificar experiencia'});
+        //alert("Error al modificar experiencia");
         this.router.navigate(['']);
       }
     )
@@ -28,9 +30,11 @@ export class EditExperienciaComponent implements OnInit {
     const id = this.activatedRoute.snapshot.params['id'];
     this.sExperiencia.update(id,this.expLab).subscribe(
       data => {
+        Swal.fire('Experiencia modificada');
         this.router.navigate(['']);
       }, err =>{
-        alert("Error al modificar experiencia");
+        Swal.fire({ icon: 'error',text: 'Error al modificar experiencia'});
+        //alert("Error al modificar experiencia");
         this.router.navigate(['']);
       }
     )

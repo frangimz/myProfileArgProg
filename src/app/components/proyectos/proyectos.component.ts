@@ -3,6 +3,7 @@ import { faPen, faTrash, faPlus,faPlusCircle} from '@fortawesome/free-solid-svg-
 import { Proyecto } from 'src/app/model/proyecto';
 import { SProyectoService } from 'src/app/services/s-proyecto.service';
 import { TokenService } from 'src/app/services/token.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-proyectos',
@@ -42,10 +43,32 @@ export class ProyectosComponent implements OnInit {
         data =>{
           this.cargarProyecto();
         },err =>{
-          alert("No se pudo eliminar la Proyecto");
+          Swal.fire({ icon: 'error',text:'No se pudo eliminar el proyecto'} );
+          //alert("No se pudo eliminar la Proyecto");
         }
       )
     }
   }
 
+  verifyDelete(id: number,type: string){
+    Swal.fire({
+      title: 'Eliminar '+type+'?',
+      text: "Este cambio es irreversible!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, eliminar!',
+      cancelButtonText: 'cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.delete(id);
+        Swal.fire(
+          'Eliminado!',
+          'Se ha eliminado '+type+' exitosamente.',
+          'success'
+        )
+      }
+    })
+  }
 }

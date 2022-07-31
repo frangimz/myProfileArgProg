@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { persona } from 'src/app/model/persona.model';
 import { PersonaService } from 'src/app/services/persona.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-edit-acerca-de',
@@ -23,9 +24,11 @@ export class EditAcercaDeComponent implements OnInit {
     const id= this.activatedRoute.snapshot.params['id'];
     this.personaService.update(id,this.persona).subscribe(
       data => {
+        Swal.fire('Perfil modificado');
         this.router.navigate(['']);
       },err =>{
-        alert("Error al modificar Perfil");
+        Swal.fire({ icon: 'error',text: 'Error al modificar el perfil'});
+        //alert("Error al modificar Perfil");
         this.router.navigate(['']);
       }
     )

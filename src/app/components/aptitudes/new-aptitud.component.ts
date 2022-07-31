@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Skill } from 'src/app/model/skill';
 import { SSkillService } from 'src/app/services/s-skill.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-new-aptitud',
@@ -22,10 +23,12 @@ export class NewAptitudComponent implements OnInit {
     const skill = new Skill(this.nombre, this.img, this.porcentaje);
     this.sSkill.save(skill).subscribe(
       data=> {
-        alert("Aptitu añadida");
+        Swal.fire('Aptitud añadida');
+        //alert("Aptitu añadida");
         this.router.navigate(['']);
       },err => {
-        alert("Falló");
+        Swal.fire({ icon: 'error',text: 'Falló'});
+        //alert("Falló");
         this.router.navigate(['']);
       }
     );

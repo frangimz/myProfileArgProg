@@ -5,11 +5,12 @@
   </a>
 </h1>
     <div class="text-center col-sm-4 col-md-4 col-lg-4" *ngFor="let Skill of skill">
-        <circle-progress
+      <div>
+        <circle-progress 
         [percent]="Skill.porcentaje"
         [radius]="80"
         [title]="Skill.nombre"
-        [imageSrc]="Skill.img"
+        [imageSrc]="Skill.img" 
         [showImage]="true"
         [imageWidth]="60"
         [imageHeight]="60"
@@ -22,11 +23,12 @@
         [innerStrokeColor]="'white'"
         [animationDuration]="500"
       ></circle-progress>
+      </div>
       <div>
         <a class="icons" href="/editskill/{{Skill.id}}" *ngIf="isLogged">
           <fa-icon [icon]="faPen"></fa-icon> 
         </a>
-        <a class="icons" (click)="delete(Skill.id)" *ngIf="isLogged">
+        <a class="icons" (click)="verifyDelete(Skill.id,'la aptitud')" *ngIf="isLogged">
           <fa-icon [icon]="faTrash"></fa-icon> 
         </a>
       </div>

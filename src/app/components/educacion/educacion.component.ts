@@ -3,6 +3,7 @@ import { Educacion } from 'src/app/model/educacion';
 import { SEducacionService } from 'src/app/services/s-educacion.service';
 import { TokenService } from 'src/app/services/token.service';
 import { faPen, faTrash, faPlus,faPlusCircle} from '@fortawesome/free-solid-svg-icons';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-educacion',
@@ -45,9 +46,33 @@ export class EducacionComponent implements OnInit {
         data =>{
           this.cargarEducacion();
         },err =>{
-          alert("No se pudo eliminar la educación");
+          Swal.fire({ icon: 'error',text:'No se pudo eliminar la educación'} );
+          //alert("No se pudo eliminar la educación");
         }
       )
     }
   }
+
+  verifyDelete(id: number,type: string){
+    Swal.fire({
+      title: 'Eliminar '+type+'?',
+      text: "Este cambio es irreversible!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, eliminar!',
+      cancelButtonText: 'cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        this.delete(id);
+        Swal.fire(
+          'Eliminado!',
+          'Se ha eliminado '+type+' exitosamente.',
+          'success'
+        )
+      }
+    })
+  }
+
 }
