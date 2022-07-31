@@ -7,7 +7,7 @@ import { Skill } from '../model/skill';
   providedIn: 'root'
 })
 export class SSkillService {
-  URL = 'https://myprofile-b.herokuapp.com/explab/';
+  URL = 'https://myprofile-b.herokuapp.com/skill/';
   //URL = 'http://localhost:8080/skill/';
 
 
