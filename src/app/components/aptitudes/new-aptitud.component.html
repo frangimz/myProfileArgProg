@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+        <div>
+            <form (ngSubmit)="onCreate()" novalidate #f="ngForm">
+            <div class="form-group">
+                <label for="nombre">Nombre de la aptitud</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" [(ngModel)]="nombre" required>
+            </div>      
+            <div class="form-group">
+                <label for="img">Imagen de la aptitud</label>
+                <input type="text" class="form-control" id="img" name="img" [(ngModel)]="img" required>
+            </div>   
+            <div class="form-group">
+                <label for="porcentaje">Porcentaje de la aptitud</label>
+                <input type="text" class="form-control" id="porcentaje" name="porcentaje" [(ngModel)]="porcentaje" required>
+            </div>   
+            <button class="btn btn-primary">
+                Agregar Aptitud
+            </button>
+            </form>
+        </div>
+    </div>
+</div>

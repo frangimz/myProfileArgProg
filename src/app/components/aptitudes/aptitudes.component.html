@@ -1,96 +1,36 @@
 <div class="row">
-  <h1>Aptitudes</h1>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-      <circle-progress
-      [percent]="85"
-      [radius]="80"
-      [title]="'APTITUD 1'"
-      [showUnits]="false"
-      [showSubtitle]="false"
-      [outerStrokeWidth]="16"
-      [innerStrokeWidth]="8"
-      [outerStrokeColor]="'blue'"
-      [innerStrokeColor]="'#C7E596'"
-      [animation]="true"
-      [animationDuration]="500"
-    ></circle-progress>
-  </div>
-  <div class="text-center col-sm-4 col-md-4 col-lg-4">
-    <circle-progress
-    [percent]="85"
-    [radius]="80"
-    [title]="'APTITUD 2'"
-    [showUnits]="false"
-    [showSubtitle]="false"
-    [outerStrokeWidth]="16"
-    [innerStrokeWidth]="8"
-    [outerStrokeColor]="'blue'"
-    [innerStrokeColor]="'#C7E596'"
-    [animation]="true"
-    [animationDuration]="500"
-  ></circle-progress>
-</div>
-<div class="text-center col-sm-4 col-md-4 col-lg-4">
-  <circle-progress
-  [percent]="85"
-  [radius]="80"
-  [title]="'APTITUD 3'"
-  [showUnits]="false"
-  [showSubtitle]="false"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="8"
-  [outerStrokeColor]="'blue'"
-  [innerStrokeColor]="'#C7E596'"
-  [animation]="true"
-  [animationDuration]="500"
-></circle-progress>
-</div>
-<div class="text-center col-sm-4 col-md-4 col-lg-4">
-  <circle-progress
-  [percent]="85"
-  [radius]="80"
-  [title]="'APTITUD 4'"
-  [showUnits]="false"
-  [showSubtitle]="false"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="8"
-  [outerStrokeColor]="'blue'"
-  [innerStrokeColor]="'#C7E596'"
-  [animation]="true"
-  [animationDuration]="500"
-></circle-progress>
-</div>
-<div class="text-center col-sm-4 col-md-4 col-lg-4">
-  <circle-progress
-  [percent]="85"
-  [radius]="80"
-  [title]="'APTITUD 5'"
-  [showUnits]="false"
-  [showSubtitle]="false"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="8"
-  [outerStrokeColor]="'blue'"
-  [innerStrokeColor]="'#C7E596'"
-  [animation]="true"
-  [animationDuration]="500"
-></circle-progress>
-</div>
-<div class="text-center col-sm-4 col-md-4 col-lg-4">
-  <circle-progress
-  [percent]="85"
-  [radius]="80"
-  [title]="'APTITUD 6'"
-  [showUnits]="false"
-  [showSubtitle]="false"
-  [outerStrokeWidth]="16"
-  [innerStrokeWidth]="8"
-  [outerStrokeColor]="'blue'"
-  [innerStrokeColor]="'#C7E596'"
-  [animation]="true"
-  [animationDuration]="500"
-></circle-progress>
-</div>
-</div>
+  <h2>Aptitudes      
+    <a class="icons" href="/nuevaskill" *ngIf="isLogged">
+    <fa-icon [icon]="faPlusCircle"></fa-icon> 
+  </a>
+</h2>
+    <div class="text-center col-sm-4 col-md-4 col-lg-4" *ngFor="let Skill of skill">
+        <circle-progress
+        [percent]="Skill.porcentaje"
+        [radius]="80"
+        [title]="Skill.nombre"
+        [imageSrc]="Skill.img"
+        [showImage]="true"
+        [imageWidth]="60"
+        [imageHeight]="60"
+        [showUnits]="false"
+        [outerStrokeWidth]="16"
+        [innerStrokeWidth]="8"
+        [outerStrokeColor]="'blue'"
+        [innerStrokeColor]="'#C7E596'"
+        [animation]="true"
+        [innerStrokeColor]="'white'"
+        [animationDuration]="500"
+      ></circle-progress>
+      <div>
+        <a class="icons" href="/editskill/{{Skill.id}}" *ngIf="isLogged">
+          <fa-icon [icon]="faPen"></fa-icon> 
+        </a>
+        <a class="icons" (click)="delete(Skill.id)">
+          <fa-icon [icon]="faTrash"></fa-icon> 
+        </a>
+      </div>
+    </div>
 
 <!--<div class="card mat-card">
     <div id="aptitudes">
