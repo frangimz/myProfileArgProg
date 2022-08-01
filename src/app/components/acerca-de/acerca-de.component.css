@@ -50,3 +50,8 @@ div{
     color: blue;
     font-size: 20px;
 }
+
+#descripcion{
+    margin: 10px;
+    padding: 0px;
+}

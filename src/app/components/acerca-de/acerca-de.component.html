@@ -9,14 +9,12 @@
         </div>
     </div>
 
-    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-        <div id="acerca-de-mi">
+    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6" id="acerca-de-mi">
             <h1>Acerca de mí
                 <a class="icons" href="/editperfil/{{persona.id}}" *ngIf="isLogged">
                     <fa-icon [icon]="faPen"></fa-icon> 
                 </a>    
             </h1>        
-            <p>{{persona.descripcion}}</p>
-        </div>
+            <p id="descripcion">{{persona.descripcion}}</p>
     </div>
 </div>
