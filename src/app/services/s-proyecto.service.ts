@@ -7,7 +7,7 @@ import { Proyecto } from '../model/proyecto';
   providedIn: 'root'
 })
 export class SProyectoService {
-  URL = 'https://myprofile-b.herokuapp.com/project/';
+  URL = 'https://portafoliofrangimzarg.fly.dev/project/';
   //URL = 'http://localhost:8080/project/';
 
   constructor(private httpClient: HttpClient) { }
