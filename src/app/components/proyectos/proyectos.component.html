@@ -1,28 +1,33 @@
+
 <div class="row">
-    <h1 class="title">Proyectos 
-        <a class="icons" href="/nuevoproy" *ngIf="isLogged">
-            <fa-icon [icon]="faPlusCircle"></fa-icon> 
-          </a>
-    </h1>
-</div>
-    <div *ngFor="let Proyecto of proy">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
-              <!--<img [src]=Proyecto.img class="img-proyecto">-->
-              <div class="proy-img" style="background-image: url({{Proyecto.img}})">
-                <p>{{Proyecto.nombre}}</p>
+  <div class="container">
+    <div>
+      <h1 class="title">Proyectos 
+          <a class="icons" href="/nuevoproy" *ngIf="isLogged">
+              <fa-icon [icon]="faPlusCircle"></fa-icon> 
+            </a>
+      </h1>
+    </div>
+      <div *ngFor="let Proyecto of proy">
+          <div class="row">
+              <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                <!--<img [src]=Proyecto.img class="img-proyecto">-->
+                <div class="proy-img" style="background-image: url({{Proyecto.img}})">
+                  <p>{{Proyecto.nombre}}</p>
+                </div>
               </div>
-            </div>
-            <div class="col-xs-10 col-sm-10 col-md-5 col-lg-6">
-              {{Proyecto.descripcion}}
-            </div>
-            <div class="col-xs-2 col-sm-1 col-md-1 col-lg-1" *ngIf="isLogged">
-                <a class="icons" href="/editproy/{{Proyecto.id}}">
-                  <fa-icon [icon]="faPen"></fa-icon> 
+              <div class="col-xs-10 col-sm-10 col-md-5 col-lg-6">
+                {{Proyecto.descripcion}}
+              </div>
+              <div class="col-xs-2 col-sm-1 col-md-1 col-lg-1" *ngIf="isLogged">
+                  <a class="icons" href="/editproy/{{Proyecto.id}}">
+                    <fa-icon [icon]="faPen"></fa-icon> 
+                  </a>
+                <a class="icons" (click)="verifyDelete(Proyecto.id,'el proyecto')">
+                  <fa-icon [icon]="faTrash"></fa-icon> 
                 </a>
-              <a class="icons" (click)="verifyDelete(Proyecto.id,'el proyecto')">
-                <fa-icon [icon]="faTrash"></fa-icon> 
-              </a>
-            </div>
-        </div>
+              </div>
+          </div>
+    </div>
   </div>
+</div>

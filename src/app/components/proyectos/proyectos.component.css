@@ -3,6 +3,13 @@
     background-color: lightskyblue;
 }
 
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+}
+
 .contenedor{
     width: auto;
 }
@@ -25,12 +32,9 @@
 
 .title{
     margin: 0px;
-    padding-left: 20px;
-    background-color: lightskyblue;
 }
 
 div{
-    background-color: lightskyblue;
     text-align: center;
 }
 

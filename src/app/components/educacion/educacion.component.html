@@ -1,28 +1,30 @@
 <div class="row">
-  <h1 class="title">Educación
-      <a class="icons" href="/nuevaedu" *ngIf="isLogged">
-        <fa-icon [icon]="faPlusCircle"></fa-icon> 
-      </a>
-    </h1>
-  <div class="col-lg-1"></div>
-  <div class="col-lg-11">
-    <table class="table">
-      <tbody>
-        <tr *ngFor="let Educacion of educacion">
-          <td><h3>{{Educacion.nombreEd}}</h3></td>
-          <td>{{Educacion.descripcionEd}}</td>
-          <td *ngIf="isLogged">
-              <a class="icons" href="/editedu/{{Educacion.id}}">
-                <fa-icon [icon]="faPen"></fa-icon> 
+  <div class="container">
+    <h1 class="title">Educación
+        <a class="icons" href="/nuevaedu" *ngIf="isLogged">
+          <fa-icon [icon]="faPlusCircle"></fa-icon> 
+        </a>
+      </h1>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-11">
+      <table class="table">
+        <tbody>
+          <tr *ngFor="let Educacion of educacion">
+            <td><h3>{{Educacion.nombreEd}}</h3></td>
+            <td>{{Educacion.descripcionEd}}</td>
+            <td *ngIf="isLogged">
+                <a class="icons" href="/editedu/{{Educacion.id}}">
+                  <fa-icon [icon]="faPen"></fa-icon> 
+                </a>
+            </td>
+            <td *ngIf="isLogged">
+              <a class="icons" (click)="verifyDelete(Educacion.id,'la educacion')">
+                <fa-icon [icon]="faTrash"></fa-icon> 
               </a>
           </td>
-          <td *ngIf="isLogged">
-            <a class="icons" (click)="verifyDelete(Educacion.id,'la educacion')">
-              <fa-icon [icon]="faTrash"></fa-icon> 
-            </a>
-        </td>
-        </tr>
-      </tbody>
-    </table>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>

@@ -1,29 +1,31 @@
 <div class="row">
-  <h1 class="title">Experiencia Laboral
-      <a class="icons" href="/nuevaexp" *ngIf="isLogged">
-        <fa-icon [icon]="faPlusCircle"></fa-icon> 
-      </a>
-    </h1>
-  <div class="col-lg-1"></div>
-  <div class="col-lg-11">
-    <table class="table">
-      <tbody>
-        <tr *ngFor="let Experiencia of expe">
-          <td><h3>{{Experiencia.nombreE}}</h3></td>
-          <td>{{Experiencia.descripcionE}}</td>
-          <td *ngIf="isLogged">
-              <a class="icons" href="/editexp/{{Experiencia.id}}">
-                <fa-icon [icon]="faPen"></fa-icon> 
+  <div class="container">
+    <h1 class="title">Experiencia Laboral
+        <a class="icons" href="/nuevaexp" *ngIf="isLogged">
+          <fa-icon [icon]="faPlusCircle"></fa-icon> 
+        </a>
+      </h1>
+    <div class="col-lg-1"></div>
+    <div class="col-lg-11">
+      <table class="table">
+        <tbody>
+          <tr *ngFor="let Experiencia of expe">
+            <td><h3>{{Experiencia.nombreE}}</h3></td>
+            <td>{{Experiencia.descripcionE}}</td>
+            <td *ngIf="isLogged">
+                <a class="icons" href="/editexp/{{Experiencia.id}}">
+                  <fa-icon [icon]="faPen"></fa-icon> 
+                </a>
+            </td>
+            <td *ngIf="isLogged">
+              <a class="icons" (click)="verifyDelete(Experiencia.id,'la experiencia')">
+                <fa-icon [icon]="faTrash"></fa-icon> 
               </a>
           </td>
-          <td *ngIf="isLogged">
-            <a class="icons" (click)="verifyDelete(Experiencia.id,'la experiencia')">
-              <fa-icon [icon]="faTrash"></fa-icon> 
-            </a>
-        </td>
-        </tr>
-      </tbody>
-    </table>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 
