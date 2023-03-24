@@ -8,6 +8,7 @@
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
+    flex-direction: column;
 }
 
 .contenedor{
@@ -30,10 +31,6 @@
     padding: 5px;
 }
 
-.title{
-    margin: 0px;
-}
-
 div{
     text-align: center;
 }
@@ -43,9 +40,8 @@ h1.title{
 }
 
 .proy-img{
-    border-radius: 10%;
-    width: 100%;
     height: 200px;
+    border-radius: 10%;
     transition: 0.5s;
     display: flex;
     justify-content: center;
@@ -69,4 +65,22 @@ h1.title{
 .proy-img:hover p{
     opacity: 1;
     transform: scale(1);
+}
+
+.proy-descrip,.proy-img{
+    width: 400px;
+    margin: 15px;
+}
+
+.div-proy-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.div-proy{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }

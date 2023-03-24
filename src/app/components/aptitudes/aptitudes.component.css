@@ -8,6 +8,7 @@
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
+    flex-direction: column;
 }
 
 .icons{
@@ -26,4 +27,10 @@ div{
 
 h1.title{
     text-align: left;
+}
+
+.app-circles{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
