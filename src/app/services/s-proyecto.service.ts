@@ -7,7 +7,7 @@ import { Proyecto } from '../model/proyecto';
   providedIn: 'root'
 })
 export class SProyectoService {
-  URL = 'https://portafoliofrangimzarg.fly.dev/project/';
+  URL = 'https://backendprofileargprog-production.up.railway.app/project/';
   //URL = 'http://localhost:8080/project/';
 
   constructor(private httpClient: HttpClient) { }
