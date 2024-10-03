@@ -67,10 +67,6 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
-            },
-            "ghpages": {
-              "outputHashing": "all",
-              "baseHref": "/myProfileArgProg/" 
             }
           },
           "defaultConfiguration": "production"
@@ -114,7 +110,7 @@
           "builder": "angular-cli-ghpages:deploy",
           "options": {
             "branch": "main",
-            "baseHref": "/myProfileArgProg/" 
+            "baseHref": "/myProfileArgProg/"  
           }
         }
       }
