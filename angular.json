@@ -20,7 +20,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "docs",  
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -57,7 +57,8 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/"  
             },
             "development": {
               "buildOptimizer": false,
@@ -66,6 +67,10 @@
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
+            },
+            "ghpages": {
+              "outputHashing": "all",
+              "baseHref": "/myProfileArgProg/" 
             }
           },
           "defaultConfiguration": "production"
@@ -109,7 +114,7 @@
           "builder": "angular-cli-ghpages:deploy",
           "options": {
             "branch": "main",
-            "baseHref": "/MyProfileArgProg/"
+            "baseHref": "/myProfileArgProg/" 
           }
         }
       }
