@@ -108,7 +108,8 @@
         "deploy": {
           "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "branch": "main"
+            "branch": "main",
+            "baseHref": "/MyProfileArgProg/"
           }
         }
       }
