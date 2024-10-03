@@ -42,7 +42,7 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
+                  "maximumWarning": "700kb",
                   "maximumError": "1mb"
                 },
                 {
@@ -106,13 +106,10 @@
           }
         },
         "deploy": {
-          "builder": "@angular/fire:deploy",
+          "builder": "angular-cli-ghpages:deploy",
           "options": {
-            "prerender": false,
-            "ssr": false,
-            "browserTarget": "myprofile:build:production",
-            "firebaseProject": "hosting-myprofile",
-            "firebaseHostingSite": "hosting-myprofile"
+            "branch": "gh-pages",
+            "baseHref": "/myProfileArgProg/"
           }
         }
       }
