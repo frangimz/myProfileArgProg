@@ -28,7 +28,6 @@ import { NewAptitudComponent } from './components/aptitudes/new-aptitud.componen
 import { EditAptitudComponent } from './components/aptitudes/edit-aptitud.component';
 import { NewProyectoComponent } from './components/proyectos/new-proyecto.component';
 import { EditProyectoComponent } from './components/proyectos/edit-proyecto.component';
-import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -63,8 +62,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
     FormsModule
   ],
   providers: [
-    InterceptorProvider,
-    { provide: LocationStrategy, useClass: HashLocationStrategy }
+    InterceptorProvider
   ],
   bootstrap: [AppComponent]
 })
