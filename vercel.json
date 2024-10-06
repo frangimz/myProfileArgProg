@@ -1,20 +1,7 @@
-{
-    "version": 2,
-    "public": false,
-    "builds": [
-      {
-        "src": "dist/myprofile/**",
-        "use": "@vercel/static"
-      }
+  {
+    "rewrites": [
+      { "source": "/(.*)", "destination": "/index.html" }
     ],
-    "routes": [
-      {
-        "handle": "filesystem"
-      },
-      {
-        "src": "/.*",
-        "dest": "/index.html"
-      }
-    ]
+    "outputDirectory": "dist/myprofile"
   }
   
