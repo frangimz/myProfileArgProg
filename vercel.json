@@ -1,7 +1,17 @@
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/index.html" }
+    "version": 2,
+    "public": false,
+    "builds": [
+      {
+        "src": "dist/myprofile/**",
+        "use": "@vercel/static"
+      }
     ],
-    "outputDirectory": "dist/myprofile"
+    "routes": [
+      {
+        "src": "/(.*)",
+        "dest": "/index.html"
+      }
+    ]
   }
   
