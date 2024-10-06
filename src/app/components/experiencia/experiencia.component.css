@@ -23,3 +23,12 @@ h1, h3{
 h1.title{
     text-align: left;
 }
+
+table {
+    background-color: lightskyblue; /* O usa #87CEEB para skyblue */
+}
+  
+table th, table td {
+    background-color: lightskyblue; /* Asegúrate de aplicar también a las celdas */
+}
+  
